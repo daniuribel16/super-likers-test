@@ -1,0 +1,23 @@
+<div class="background">
+	<div class="container">
+		<div class="logo">Hangman</div>
+		<div class="login-item">
+			<div class="form form-login">
+				<div class="form-field">
+					<label>Email</label>
+					<input type="text" class="form-input" [(ngModel)]="user.email" placeholder="Email" required>
+				</div>
+
+				<div class="form-field">
+					<label>Password</label>
+					<input type="password" class="form-input" [(ngModel)]="user.password" placeholder="Password" required>
+				</div>
+
+				<button  (click)="loginUser()">Iniciar Sesión</button>
+				<div class="register-link">
+					<span routerLink="/register-user">Registrame</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

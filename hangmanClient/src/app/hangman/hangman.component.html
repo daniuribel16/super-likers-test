@@ -1,0 +1,45 @@
+<div class="display-flex-row">
+    <div class="lateral-list-container display-flex-column">
+        <div class="history-container display-flex-column">
+            <div class="title-container display-flex-row center-flex">
+                <span class="history-title">Historial</span>
+            </div>
+            <div class="history-item display-flex-row" *ngFor="let item of history">
+                <div class="date-container display-flex-row center-flex">
+                    <span class="history-date">{{formatDate(item.date)}}</span>
+                </div>
+                <div class="icon-container  display-flex-row center-flex">
+                    <i [ngStyle]="{'color': item.won ? 'green' : 'red'}" [ngClass]="{'fa': true, 'fa-check': item.won, 'fa-times': !item.won}"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions-container">
+            <div class="instructions-item display-flex-column">
+                <div class="title-container display-flex-row center-flex">
+                    <span class="history-title">Instrucciones</span>
+                </div>
+                <div class="instructions center-flex">
+                    Ingresa letra por letra desde tu teclado y observa si la palabra escondida la contiene, tienes 5 intentos para adivinarla.
+                </div>
+            </div>
+            <button (click)="logout()" class="btn-logout">Cerrar sessión</button>
+        </div>
+    </div>
+    
+    <div class="game-container">
+        <div class="title-container display-flex-row center-flex">
+            <span class="title">Hangman</span>
+        </div>
+        <div class="board-container center-flex">
+            <div class="hidden-letters display-flex-row">
+                <div *ngFor="let letter of hiddenWord" class="letter">{{letter}}</div>
+            </div>
+        </div>
+        <div class="board-container center-flex">
+            <div class="hidden-letters display-flex-row">
+                <div *ngFor="let letter of userInput" class="input-letter">{{letter}}</div>
+            </div>
+        </div>
+    </div>
+</div>

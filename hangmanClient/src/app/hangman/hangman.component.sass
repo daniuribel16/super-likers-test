@@ -1,0 +1,102 @@
+@import "../../variables"
+
+.display-flex-row
+  display: flex
+  flex-direction: row
+
+.display-flex-column
+  display: flex
+  flex-direction: column
+
+.center-flex
+  justify-content: center
+  align-items: center
+
+.lateral-list-container
+  height: 100vh
+  background-color: $secondary
+  flex: 1
+
+.game-container
+  flex: 4
+  height: 100vh
+
+.board-container
+  height: 40vh
+  display: flex
+
+.hidden-letters
+  flex-wrap: wrap
+  justify-content: center
+  margin: 0 3rem
+
+.letter, .input-letter
+  border-bottom: 0.2rem solid $secondary
+  font-size: 3.5rem
+  font-weight: 600
+  color: $secondary
+  width: 3.5rem
+  height: 5rem
+  margin-right: 1.5rem
+  text-align: center
+
+.input-letter
+  border-bottom: 0px
+  color: $third
+
+.title-container
+  height: 10vh
+
+.title
+  color: $forth
+  font-size: 3rem
+
+.history-container
+  height: 70vh
+  overflow-y: auto
+
+.history-title
+  color: $third
+  font-size: 1.5rem
+  font-weight: 600
+
+.history-item
+  width: 90%
+  min-height: 3.2rem
+  border-radius: 5px
+  background-color: $grey
+  margin: 0.35rem auto
+  box-shadow: 7px 9px 10px -10px rgba(0,0,0,0.75)
+
+.date-container
+  width: 70%
+
+.icon-container
+  width: 30%
+
+.instructions-container
+  height: 30vh
+  text-align: center
+
+.instructions-item
+  width: 90%
+  border-radius: 5px
+  background-color: $secondary
+  border: 1px solid $third
+  margin: 0.35rem auto
+  padding-bottom: 1.5rem
+  text-align: center
+
+.instructions
+  color: #000
+
+.btn-logout
+  background-color: $third
+  color: $secondary
+  font-weight: bold
+  text-transform: uppercase
+  width: 80%
+  margin: 0.5rem auto
+  height: 3.2rem
+  outline-color: $secondary
+  border-radius: 5px

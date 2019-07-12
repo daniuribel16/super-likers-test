@@ -1,0 +1,43 @@
+<div class="background">
+	<div class="container">
+		<div class="logo">Registro</div>
+		<div class="login-item">
+			<div class="form form-login">
+				<div class="form-field">
+					<label>Nombre</label>
+					<input [(ngModel)]="user.name" type="text" class="form-input" placeholder="Nombre" required>
+				</div>
+
+				<div class="form-field">
+					<label>Apellido</label>
+					<input [(ngModel)]="user.last_name" type="text" class="form-input" placeholder="Apellido" required>
+				</div>
+
+				<div class="form-field">
+					<label>Teléfono</label>
+					<input [(ngModel)]="user.phone" type="text" class="form-input" placeholder="Teléfono" required>
+				</div>
+
+				<div class="form-field">
+						<label>Email</label>
+						<input [(ngModel)]="user.email" type="email" class="form-input" placeholder="Email" required>
+					</div>
+
+				<div class="form-field">
+					<label>Password</label>
+					<input [(ngModel)]="user.password" type="password" class="form-input" placeholder="Password" required>
+				</div>
+
+				<div class="form-field">
+					<label>Confirme Password</label>
+					<input [(ngModel)]="user.repeat_pass" type="password" class="form-input" placeholder="Confirme Password" required>
+				</div>
+
+				<button (click)="registerUser()">Registrame</button>
+				<div class="register-link">
+					<span routerLink="/login">Atras</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
